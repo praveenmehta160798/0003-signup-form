@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<!-- FONT-AWESOME-CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<!-- index css -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="box">
+		
+		<div class="container">
+		<!-- <div class="buttons">
+			<div class="prev btn" onclick="prev()">Previous</div>
+			<div class="next btn" onclick="next()">Next</div>
+		</div> -->
+		<div class="head">
+			<h1>Signup Form</h1>
+			<div class="indicators">
+				<div class="line1 line">
+					<div class="sub-line1"></div>
+					<div class="sub-line2"></div>
+				</div>
+				<div class="line2 line">
+					<div class="sub-line1"></div>
+					<div class="sub-line2"></div>
+				</div>
+				<div class="line3 line">
+					<div class="sub-line1"></div>
+					<div class="sub-line2"></div>
+				</div>
+				<div class="indicator-box indicator-box1">
+					<p>Name</p>
+					<div class="step">
+						<span>1</span>
+						<span><i class="fa-solid fa-check"></i></span>
+					</div>
+				</div>
+				<div class="indicator-box indicator-box2">
+					<p>Contact</p>
+					<div class="step">
+						<span>2</span>
+						<span><i class="fa-solid fa-check"></i></span>
+					</div>
+				</div>
+				<div class="indicator-box indicator-box3">
+					<p>Birth</p>
+					<div class="step">
+						<span>3</span>
+						<span><i class="fa-solid fa-check"></i></span>
+					</div>
+				</div>
+				<div class="indicator-box indicator-box4">
+					<p>Submit</p>
+					<div class="step">
+						<span>4</span>
+						<span><i class="fa-solid fa-check"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pages">
+			<div class="page page1">
+				<div class="heading">Basic Info:</div>
+				<div class="field">
+					<div class="label">First Name</div>
+					<input type="text" name="fname" id="fname" maxlength="20" onblur="fnameValidation(this)" autocomplete="off">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="field">
+					<div class="label">Last Name</div>
+					<input type="text" name="lname" id="lname" maxlength="15" onblur="lnameValidation(this)" autocomplete="off">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="btn-box">
+					<div class="btn nextBtn">Next</div>
+				</div>
+			</div>
+			<div class="page page2">
+				<div class="heading">Contact:</div>
+				<div class="field">
+					<div class="label">Email</div>
+					<input type="text" name="email" id="email" maxlength="30" onblur="emailValidation(this)" autocomplete="off">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="field">
+					<div class="label">Phone</div>
+					<input type="number" name="phone" id="phone" maxlength="10" onblur="phoneValidation(this)" autocomplete="off">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="btn-box">
+					<div class="btn previousBtn">Previous</div>
+					<div class="btn nextBtn">Next</div>
+				</div>
+			</div>
+			<div class="page page3">
+				<div class="heading">Birth:</div>
+				<div class="field">
+					<div class="label">Date of Birth</div>
+					<input type="date" name="dob" id="dob" min="1990-12-03" max="2004-12-03" onblur="dobValidation(this)" onKeyDown="return false">
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="field success">
+					<div class="label">Gender</div>
+					<select name="gender" id="gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="btn-box">
+					<div class="btn previousBtn">Previous</div>
+					<div class="btn nextBtn">Next</div>
+				</div>
+			</div>
+			<div class="page page4">
+				<div class="heading">Submit:</div>
+				<div class="field">
+					<div class="label">Create Pin</div>
+					<input type="number" name="pin" id="pin" onblur="pinValidation(this)">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg">erro msg</span>
+				</div>
+				<div class="field">
+					<div class="label">Confirm Pin</div>
+					<input type="number" name="cpin" id="cpin" onblur="cpinValidation(this)">
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<span class="error-msg"></span>
+				</div>
+				<div class="btn-box">
+					<div class="btn previousBtn">Previous</div>
+					<div class="btn submitBtn" onclick="submit()">Submit</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
